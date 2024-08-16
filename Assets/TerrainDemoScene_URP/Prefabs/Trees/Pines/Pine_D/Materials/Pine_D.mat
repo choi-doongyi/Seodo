@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 5
+  version: 7
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -37,15 +37,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Pine_D
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: -6465566751694194690, guid: d4fdc026464a42041be7fe785babd90e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _EMISSION
-  - _NORMALMAP
-  m_InvalidKeywords:
   - BACKFACE_NORMAL_MODE_MIRROR
   - _WINDQUALITY_BETTER
+  m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
@@ -66,40 +64,12 @@ Material:
         m_Texture: {fileID: 2800000, guid: d3393fe9697a4cc4bb9719940b43d429, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _ExtraTex:
         m_Texture: {fileID: 2800000, guid: 039e517c666f4734884c339133348f5d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 6a98d0f3bc68ba745b47f452902abf91, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubsurfaceTex:
@@ -134,7 +104,6 @@ Material:
     - _AlphaToMaskInspectorValue: 0
     - _Blend: 0
     - _BlendMode: 0
-    - _BumpScale: 1
     - _CanopyBaseHeight: 6
     - _Canopy_Base_Height: 0
     - _CastShadows: 1
@@ -142,28 +111,21 @@ Material:
     - _Cull: 0
     - _CullMode: 0
     - _CullModeForward: 0
-    - _Cutoff: 0.5
     - _DepthOffsetEnable: 0
-    - _DetailNormalMapScale: 1
     - _DoubleSidedEnable: 1
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 0
     - _DstBlend: 0
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
-    - _GlossMapScale: 1
     - _Glossiness: 0
-    - _GlossyReflections: 1
     - _HueVariationKwToggle: 1
     - _Metallic: 0
     - _Mip_Bias: 1
     - _Mip_Scale: 0.2
-    - _Mode: 0
     - _NormalMapKwToggle: 1
-    - _OcclusionStrength: 1
     - _OldHueVarBehavior: 0
     - _OpaqueCullMode: 2
-    - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RayTracing: 0
@@ -173,8 +135,6 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
     - _SphereAOCenter: 3
     - _SphereAODarken: 0
     - _SphereAORadius: 0.7
@@ -203,7 +163,6 @@ Material:
     - _TransparentSortPriority: 0
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
-    - _UVSec: 0
     - _UseShadowThreshold: 0
     - _WINDQUALITY: 2
     - _WindQuality: 4
@@ -219,7 +178,7 @@ Material:
     - _AO_Remap: {r: 0.3, g: 0.6, b: 0, a: 0}
     - _Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
     - _DoubleSidedConstants: {r: -1, g: -1, b: -1, a: 0}
-    - _EmissionColor: {r: 0.036889452, g: 0.036889452, b: 0.036889452, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _HueVariationColor: {r: 0.82074976, g: 0.8207547, b: 0.7696511, a: 1}
     - _Smoothness_Remap: {r: 0, g: 0.5, b: 0, a: 0}
     - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
