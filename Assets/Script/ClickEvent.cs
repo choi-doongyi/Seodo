@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorEvent : MonoBehaviour
+public class ClickEvent : MonoBehaviour
 {
     // Start is called before the first frame update
 
     CharacterController cc;
     GameManager gm;
+    TalkManager tm;
     void Start()
     {
         cc = GetComponent<CharacterController>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        tm = GameObject.Find("TalkManager").GetComponent<TalkManager>();
     }
 
     // Update is called once per frame
@@ -37,8 +40,8 @@ public class DoorEvent : MonoBehaviour
 
                 else if (hitInfo.transform.CompareTag("Item"))
                 {
-                    Destroy(hitInfo.transform.gameObject);
-                    ObjData data = hitInfo.transform.GetComponent<ObjData>();
+
+                    gm.Action(hitInfo.transform.gameObject);
                     
                 }
 
