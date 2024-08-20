@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public TMP_Text talkText;
+    public TMP_Text questText;
     public GameObject scanObject;
     public TalkManager talkManager;
 
@@ -21,6 +22,15 @@ public class GameManager : MonoBehaviour
         talkText.gameObject.SetActive(true);
         Talk(data.Id, data.NPC);
         
+    }
+
+    public void QuestAction(GameObject scanObj)
+    {
+        scanObject = scanObj;
+        ObjData data = scanObj.transform.GetComponent<ObjData>();
+        questText.gameObject.SetActive(true);
+        questText.text = "æ∆¿Ã≈€¿ª »πµÊ«œºÃΩ¿¥œ¥Ÿ.";
+
     }
 
     // Update is called once per frame

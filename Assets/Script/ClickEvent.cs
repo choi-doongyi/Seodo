@@ -38,11 +38,17 @@ public class ClickEvent : MonoBehaviour
                     //Destroy(hitInfo.transform.gameObject);
                 }
 
-                else if (hitInfo.transform.CompareTag("Item"))
+                else if (hitInfo.transform.CompareTag("Dialog"))
                 {
 
                     gm.Action(hitInfo.transform.gameObject);
                     
+                }
+                else if (hitInfo.transform.CompareTag("Item"))
+                {
+
+                    gm.QuestAction(hitInfo.transform.gameObject);
+
                 }
 
 
