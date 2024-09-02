@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ClickEvent : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ClickEvent : MonoBehaviour
     CharacterController cc;
     GameManager gm;
     TalkManager tm;
+    
     void Start()
     {
         cc = GetComponent<CharacterController>();
@@ -49,6 +51,16 @@ public class ClickEvent : MonoBehaviour
 
                     gm.QuestAction(hitInfo.transform.gameObject);
 
+                }
+                else if (hitInfo.transform.CompareTag("DoorMove"))
+                {
+                    Vector3 vel = Vector3.zero;
+                    hitInfo.transform.position = Vector3.MoveTowards(hitInfo.transform.position, hitInfo.transform.position+new Vector3(-1,0,0), 1f);
+                }
+                else if (hitInfo.transform.CompareTag("DontMoveDoor"))
+                {
+                    Vector3 vel = Vector3.zero;
+                    hitInfo.transform.position = Vector3.MoveTowards(hitInfo.transform.position, hitInfo.transform.position + new Vector3(-1, 0, 0), 1f);
                 }
 
 

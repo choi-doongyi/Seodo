@@ -15,7 +15,7 @@ public class TalkManager : MonoBehaviour
 
     void GenerateData()
     {
-        talkData.Add(0,new string[] {"안녕?", "이 곳에 처음 왔구나?"});
+        talkData.Add(0,new string[] {"안녕?", "이 곳에 처음 왔구나?","~~좀 가져와줄래??"});
     }
 
     public string GetTalk(int id, int talkIndex)

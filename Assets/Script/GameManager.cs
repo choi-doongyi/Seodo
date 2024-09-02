@@ -14,7 +14,11 @@ public class GameManager : MonoBehaviour
 
     public int talkIndex;
 
-
+    private void Awake()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked; //나중에 옮기기,.. 마우스 커서 가운데 고정
+    }
     public void Action(GameObject scanObj)
     {
         scanObject = scanObj;
@@ -22,6 +26,15 @@ public class GameManager : MonoBehaviour
         talkText.gameObject.SetActive(true);
         Talk(data.Id, data.NPC);
         
+    }
+
+    public void Warning(int select)
+    {
+        if (select == 0)
+        {
+            talkText.text = "열리지 않는다.";
+        }
+
     }
 
     public void QuestAction(GameObject scanObj)
